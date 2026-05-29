@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(allowedOriginPatterns = {"http://localhost:*", "http://127.0.0.1:*"})
 @RestController
 @RequestMapping("/api/aeroports")
 public class AeroportController {
@@ -56,3 +56,4 @@ public class AeroportController {
         return ResponseEntity.noContent().build();
     }
 }
+

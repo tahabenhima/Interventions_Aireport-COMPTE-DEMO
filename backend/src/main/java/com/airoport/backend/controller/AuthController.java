@@ -6,7 +6,7 @@ import com.airoport.backend.service.AuthService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(allowedOriginPatterns = {"http://localhost:*", "http://127.0.0.1:*"})
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -24,3 +24,4 @@ public class AuthController {
         return ResponseEntity.noContent().build();
     }
 }
+

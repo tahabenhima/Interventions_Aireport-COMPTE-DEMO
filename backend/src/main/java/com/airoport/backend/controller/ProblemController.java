@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(allowedOriginPatterns = {"http://localhost:*", "http://127.0.0.1:*"})
 @RestController
 @RequestMapping("/api/problems")
 public class ProblemController {
@@ -47,3 +47,4 @@ public class ProblemController {
         return ResponseEntity.noContent().build();
     }
 }
+

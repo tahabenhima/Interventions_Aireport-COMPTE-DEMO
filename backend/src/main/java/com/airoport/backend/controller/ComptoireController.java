@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(allowedOriginPatterns = {"http://localhost:*", "http://127.0.0.1:*"})
 @RestController
 @RequestMapping("/api/comptoires")
 public class ComptoireController {
@@ -66,3 +66,4 @@ public class ComptoireController {
         return ResponseEntity.noContent().build();
     }
 }
+
